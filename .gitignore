@@ -1,0 +1,5 @@
+.idea/
+master-note.iml
+*.iml
+*/target/*
+*/*/target/*
