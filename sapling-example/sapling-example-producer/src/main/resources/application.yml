@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: producer-1
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: true
+    instance-id: ${spring.application.name}:localhost:${spring.application.instance_id:${server.port}}
+#eureka.instance.hostname= ${spring.cloud.client.ipAddress}
+#encrypt.failOnError=false
